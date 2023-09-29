@@ -202,3 +202,57 @@
     margin-bottom: 70px; /* Adicione a margem inferior desejada entre as seções */
   }
   
+  /* Estilização para a Seção Kanban de Tarefas */
+#kanban {
+    background-color: #f8f9fa; /* Cor de fundo cinza claro */
+    color: #090909; /* Texto preto */
+    padding: 40px 0; /* Espaçamento interno superior e inferior */
+  }
+  
+  #kanban h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Texto em maiúsculas */
+  }
+  
+  #kanban .col-md-4 {
+    padding: 20px;
+  }
+  
+  #kanban h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #kanban ul.list-group {
+    min-height: 300px;
+    background-color: #fff; /* Cor de fundo branca */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 5px; /* Cantos arredondados */
+  }
+  
+  #kanban ul.list-group li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Linha divisória entre tarefas */
+    cursor: pointer;
+  }
+  
+  #kanban ul.list-group li:last-child {
+    border-bottom: none; /* Remova a linha divisória da última tarefa */
+  }
+  
+  /* Estilização para as colunas de tarefas */
+  #afazer {
+    border-color: #e74c3c; /* Cor da borda vermelha */
+  }
+  
+  #emandamento {
+    border-color: #f39c12; /* Cor da borda amarela */
+  }
+  
+  #concluidas {
+    border-color: #27ae60; /* Cor da borda verde */
+  }
+  

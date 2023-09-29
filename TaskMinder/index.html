@@ -55,36 +55,47 @@
         </div>
       </section>
 
-      <!-- Seção "Tarefas" -->
-      <section id="tarefas" class="text-center">
-        <div class="container">
-          <h2>Suas Tarefas</h2>
-          <!-- Lista de tarefas -->
-          <ul
-            id="lista-tarefas"
-            class="list-group mx-auto"
-            style="max-width: 400px"
-          >
-            <!-- Novo campo de entrada de tarefa -->
-            <li class="list-group-item">
-              <div class="input-group">
-                <input
-                  type="text"
-                  id="nova-tarefa"
-                  class="form-control"
-                  placeholder="Adicione uma tarefa"
-                />
-                <div class="input-group-append">
-                  <button id="adicionar-tarefa" class="btn btn-primary">
-                    Adicionar
-                  </button>
-                </div>
-              </div>
-            </li>
-            <!-- Fim do novo campo de entrada de tarefa -->
+      <!-- Seção Kanban de Tarefas -->
+<section id="kanban" class="text-center">
+    <div class="container">
+      <h2>Gerencie suas Tarefas</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <h3>A Fazer</h3>
+          <ul class="list-group" id="afazer">
+            <!-- Aqui você pode adicionar tarefas a fazer -->
           </ul>
         </div>
-      </section>
+        <div class="col-md-4">
+          <h3>Em Andamento</h3>
+          <ul class="list-group" id="emandamento">
+            <!-- Aqui você pode adicionar tarefas em andamento -->
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3>Concluídas</h3>
+          <ul class="list-group" id="concluidas">
+            <!-- Aqui você pode adicionar tarefas concluídas -->
+          </ul>
+        </div>
+      </div>
+      <!-- Novo campo de texto para adicionar tarefas -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="novaTarefa"
+              placeholder="Adicionar nova tarefa"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
 
       <!-- Seção "Sobre" -->
       <section id="sobre" class="text-center">
@@ -111,5 +122,6 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
   </body>
 </html>
