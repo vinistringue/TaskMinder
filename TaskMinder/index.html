@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskMinder - Lista de Tarefas</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
+        <a class="navbar-brand mx-auto" href="#">TaskMinder</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Início</a>
+              <!-- Vincula ao ID "inicio" da seção -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tarefas">Tarefas</a>
+              <!-- Vincula ao ID "tarefas" da seção -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Sobre</a>
+              <!-- Vincula ao ID "sobre" da seção -->
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Seção "Início" -->
+      <section id="inicio" class="text-center">
+        <div class="container">
+          <h2>Seja Produtivo com o TaskMinder</h2>
+          <p>Gerencie suas tarefas com facilidade e eficiência.</p>
+          <p>Nunca mais perca o controle do que precisa ser feito.</p>
+          <a href="#tarefas" class="btn btn-comecar">Começar Agora</a>
+        </div>
+      </section>
+
+      <!-- Seção "Tarefas" -->
+      <section id="tarefas" class="text-center">
+        <div class="container">
+          <h2>Suas Tarefas</h2>
+          <!-- Lista de tarefas -->
+          <ul
+            id="lista-tarefas"
+            class="list-group mx-auto"
+            style="max-width: 400px"
+          >
+            <!-- Novo campo de entrada de tarefa -->
+            <li class="list-group-item">
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="nova-tarefa"
+                  class="form-control"
+                  placeholder="Adicione uma tarefa"
+                />
+                <div class="input-group-append">
+                  <button id="adicionar-tarefa" class="btn btn-primary">
+                    Adicionar
+                  </button>
+                </div>
+              </div>
+            </li>
+            <!-- Fim do novo campo de entrada de tarefa -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- Seção "Sobre" -->
+      <section id="sobre" class="text-center">
+        <div class="container">
+          <h2>Sobre o TaskMinder</h2>
+          <p>Conheça mais sobre nossa aplicação.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center mt-auto">
+      <!-- Adicione a classe "mt-auto" para alinhar ao final da página -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <!-- Adicione a classe "justify-content-center" para centralizar horizontalmente -->
+          <div class="col-md-6">
+            <h3>Contato</h3>
+            <p>Email: contato@taskminder.com</p>
+            <p>Telefone: (123) 456-7890</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

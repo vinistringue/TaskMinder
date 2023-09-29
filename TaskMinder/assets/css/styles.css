@@ -1,0 +1,204 @@
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos Globais */
+  body {
+    font-family: "Helvetica Neue", sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos para o cabeçalho */
+  header {
+    background-color: #e74c3c; /* Vermelho Intermediário */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Estilos para a barra de navegação */
+  .navbar {
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #e74c3c;
+  }
+  
+  /* Estilos responsivos para dispositivos móveis */
+  @media (max-width: 768px) {
+    header {
+      padding: 10px 0;
+    }
+    .navbar {
+      margin-right: 0;
+    }
+    .navbar-toggler-icon {
+      background-color: #fff;
+    }
+    .navbar-collapse {
+      text-align: center;
+      background-color: #e74c3c; /* Vermelho Intermediário */
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      border-bottom: 2px solid #fff;
+    }
+    .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 10px;
+    }
+    .nav-link {
+      margin: 10px 0;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+  }
+  
+  /* Estilos para o conteúdo principal */
+  main {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px; /* Largura máxima do conteúdo */
+  }
+  
+  /* Estilos personalizados para a Seção Início */
+  #inicio {
+    background-color: #f8f9fa; /* Cor de fundo */
+    color: #0a0a0a; /* Texto branco */
+    padding: 100px 0; /* Espaçamento interno superior e inferior */
+  }
+  
+  #inicio h2 {
+    padding: 30px;
+    font-size: 3rem; /* Tamanho da fonte grande */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #inicio p {
+    font-size: 1.5rem; /* Tamanho da fonte maior */
+    margin-bottom: 30px;
+  }
+  
+  /* Estilização do botão "Começar Agora" */
+  .btn-comecar {
+    background-color: #e74c3c; /* Cor de fundo vermelho */
+    color: #fff; /* Texto branco */
+    font-weight: bold;
+    font-size: 1.5rem; /* Tamanho da fonte maior */
+    border: none; /* Remova a borda */
+    border-radius: 30px; /* Cantos arredondados */
+    padding: 15px 30px; /* Espaçamento interno */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+  }
+  
+  .btn-comecar:hover {
+    background-color: #c0392b; /* Cor de fundo vermelho mais escura ao passar o mouse */
+  }
+  
+  /* Estilização da Seção "Tarefa" */
+  #tarefas {
+    background-color: #f8f9fa; /* Cor de fundo azul */
+    color: #090909; /* Texto branco */
+    padding: 40px 0; /* Espaçamento interno superior e inferior */
+  }
+  
+  #tarefas h2 {
+    padding: 30px;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Texto em maiúsculas */
+  }
+  
+  #tarefas .list-group-item {
+    background-color: #f8f9fa; /* Cor de fundo azul mais escura */
+    border: none; /* Remova a borda */
+  }
+  
+  #tarefas .list-group-item input {
+    background-color: #fff; /* Cor de fundo branca para o campo de entrada */
+    color: #333; /* Texto escuro */
+    font-size: 1.2rem;
+  }
+  
+  #tarefas .list-group-item .btn-primary {
+    background-color: #e74c3c; /* Cor de fundo vermelho */
+    color: #fff; /* Texto branco */
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0; /* Cantos não arredondados */
+    transition: background-color 0.3s ease;
+  }
+  
+  #tarefas .list-group-item .btn-primary:hover {
+    background-color: #c0392b; /* Cor de fundo vermelho mais escura ao passar o mouse */
+  }
+
+  /* Estilização da Seção "Sobre o TaskMinder" */
+#sobre {
+    background-color: #f8f9fa; /* Cor de fundo azul */
+    color: #333; /* Texto branco */
+    padding: 80px 0; /* Espaçamento interno superior e inferior */
+  }
+  
+  #sobre h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Texto em maiúsculas */
+  }
+  
+  #sobre p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+
+  
+  /* Estilos para o rodapé */
+  footer {
+    text-align: center;
+    padding: 70px 0;
+    background-color: #302d2d; /* Vermelho Intermediário */
+    color: #fff;
+  }
+  
+  /* Adicione espaçamento entre as seções */
+  section {
+    margin-bottom: 70px; /* Adicione a margem inferior desejada entre as seções */
+  }
+  
