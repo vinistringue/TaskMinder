@@ -1,162 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaskMinder - Lista de Tarefas</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
     <link rel="icon" href="assets/images/logo.png" type="image/png">
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
-        <a class="navbar-brand mx-auto" href="#">
-          <img src="assets/images/logo.png" alt="Ícone do TaskMinder" class="menu-icon">
-          TaskMinder
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#inicio">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#kanban">Tarefas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#sobre">Sobre</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
+            <a class="navbar-brand mx-auto" href="#">
+                <img src="assets/images/logo.png" alt="Ícone do TaskMinder" class="menu-icon">
+                TaskMinder
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kanban">Tarefas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <main>
-      <!-- Seção "Início" -->
-      <section id="inicio" class="text-center">
-        <div class="container">
-          <h2>Seja Produtivo com o TaskMinder</h2>
-          <p>Gerencie suas tarefas com facilidade e eficiência.</p>
-          <p>Nunca mais perca o controle do que precisa ser feito.</p>
-          <a href="#tarefas" class="btn btn-comecar">Começar Agora</a>
-        </div>
-      </section>
+        <!-- Seção "Início" -->
+        <section id="inicio" class="text-center">
+            <div class="container">
+                <h2>Seja Produtivo com o TaskMinder</h2>
+                <p>Gerencie suas tarefas com facilidade e eficiência.</p>
+                <p>Nunca mais perca o controle do que precisa ser feito.</p>
+                <a href="#tarefas" class="btn btn-comecar">Começar Agora</a>
+            </div>
+        </section>
 
-      <!-- Seção Kanban de Tarefas -->
-      <section id="kanban" class="text-center">
-        <div class="container">
-          <h2>Gerencie suas Tarefas</h2>
+        <!-- Seção Kanban de Tarefas -->
+        <section id="kanban" class="text-center">
+            <div class="container">
+                <h2>Gerencie suas Tarefas</h2>
 
-          <!-- Novo campo de texto e botão para adicionar tarefas -->
-          <div class="row align-items-center">
-            <div class="col-md-4 mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="novaTarefa"
-                placeholder="Nova tarefa"
-              />
-            </div>
-            <div class="col-md-2">
-              <button id="adicionar-tarefa" class="btn btn-primary btn-block">
-                Adicionar
-              </button>
-            </div>
-          </div>
-          <!-- Fim do novo campo de texto e botão para adicionar tarefas -->
+                <!-- Novo campo de texto e botão para adicionar tarefas -->
+                <div class="row align-items-center">
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" id="novaTarefa" placeholder="Nova tarefa">
+                    </div>
+                    <div class="col-md-2">
+                        <button id="adicionar-tarefa" class="btn btn-primary btn-block">Adicionar</button>
+                    </div>
+                </div>
+                <!-- Fim do novo campo de texto e botão para adicionar tarefas -->
 
-          <div class="row mt-5">
-            <div class="col-md-4">
-              <h3>A Fazer</h3>
-              <ul class="list-group" id="afazer">
-                <!-- Aqui você pode adicionar tarefas a fazer -->
-              </ul>
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <h3>A Fazer</h3>
+                        <ul class="list-group" id="afazer">
+                            <!-- Aqui você pode adicionar tarefas a fazer -->
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Em Andamento</h3>
+                        <ul class="list-group" id="emandamento">
+                            <!-- Aqui você pode adicionar tarefas em andamento -->
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Concluídas</h3>
+                        <ul class="list-group" id="concluidas">
+                            <!-- Aqui você pode adicionar tarefas concluídas -->
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-              <h3>Em Andamento</h3>
-              <ul class="list-group" id="emandamento">
-                <!-- Aqui você pode adicionar tarefas em andamento -->
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <h3>Concluídas</h3>
-              <ul class="list-group" id="concluidas">
-                <!-- Aqui você pode adicionar tarefas concluídas -->
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Seção "Sobre" -->
-      <section id="sobre" class="text-center">
-        <div class="container">
-          <h2>Sobre o TaskMinder</h2>
-          <p>
-            Bem-vindo à nossa humilde morada digital, onde a produtividade
-            encontra a simplicidade, e as tarefas mundanas ganham vida. Somos o
-            TaskMinder, uma equipe de entusiastas da organização empenhados em
-            tornar sua vida mais eficiente e menos caótica.
-          </p>
-          <p>
-            Mas quem somos nós, além de simples mortais apaixonados por listas
-            de tarefas? Somos aqueles que acreditam que o caos é apenas o começo
-            de uma ótima história, e que cada tarefa pode ser transformada em
-            uma conquista.
-          </p>
-          <p>
-            Nossa missão é simples: capacitar você a ser o mestre da sua própria
-            produtividade. Queremos ser a lanterna na escuridão das tarefas
-            intermináveis, o ombro amigo que lembra você dos prazos e a
-            ferramenta que mantém o caos sob controle.
-          </p>
-          <p>
-            Com uma pitada de inovação, uma pitada de magia e muita paixão,
-            estamos determinados a ajudá-lo a alcançar suas metas, a fazer mais
-            e a viver com menos estresse.
-          </p>
-          <p>
-            Estamos empolgados por você ter nos encontrado, e mal podemos
-            esperar para ajudar você a criar um futuro mais organizado e eficaz.
-            Junte-se a nós nesta jornada de produtividade e descubra como o
-            TaskMinder pode transformar a maneira como você lida com suas
-            tarefas diárias.
-          </p>
-          <p>
-            Lembre-se, a vida é uma lista de tarefas. E com o TaskMinder, você
-            está no controle.
-          </p>
-          <p>
-            Com amor pela organização e alegria na produtividade, A Equipe
-            TaskMinder
-          </p>
-        </div>
-      </section>
+        <!-- Seção "Sobre" -->
+        <section id="sobre" class="text-center">
+            <div class="container">
+                <h2>Sobre o TaskMinder</h2>
+                <p>
+                    Bem-vindo à nossa humilde morada digital, onde a produtividade
+                    encontra a simplicidade, e as tarefas mundanas ganham vida. Somos o
+                    TaskMinder, uma equipe de entusiastas da organização empenhados em
+                    tornar sua vida mais eficiente e menos caótica.
+                </p>
+                <p>
+                    Mas quem somos nós, além de simples mortais apaixonados por listas
+                    de tarefas? Somos aqueles que acreditam que o caos é apenas o começo
+                    de uma ótima história, e que cada tarefa pode ser transformada em
+                    uma conquista.
+                </p>
+                <p>
+                    Nossa missão é simples: capacitar você a ser o mestre da sua própria
+                    produtividade. Queremos ser a lanterna na escuridão das tarefas
+                    intermináveis, o ombro amigo que lembra você dos prazos e a
+                    ferramenta que mantém o caos sob controle.
+                </p>
+                <p>
+                    Com uma pitada de inovação, uma pitada de magia e muita paixão,
+                    estamos determinados a ajudá-lo a alcançar suas metas, a fazer mais
+                    e a viver com menos estresse.
+                </p>
+                <p>
+                    Estamos empolgados por você ter nos encontrado, e mal podemos
+                    esperar para ajudar você a criar um futuro mais organizado e eficaz.
+                    Junte-se a nós nesta jornada de produtividade e descubra como o
+                    TaskMinder pode transformar a maneira como você lida com suas
+                    tarefas diárias.
+                </p>
+                <p>
+                    Lembre-se, a vida é uma lista de tarefas. E com o TaskMinder, você
+                    está no controle.
+                </p>
+                <p>
+                    Com amor pela organização e alegria na produtividade, A Equipe
+                    TaskMinder
+                </p>
+            </div>
+        </section>
     </main>
 
-    <footer class="text-center mt-auto">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <h3>Contato</h3>
-            <p>Email: contato@taskminder.com</p>
-            <p>Telefone: (123) 456-7890</p>
-          </div>
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <!-- Informações de contato e links de redes sociais -->
+        <div class="contact">
+          <h3>Contato</h3>
+          <p>Telefone: (11) 94993-7080</p>
+          <p>E-mail: vinicius.stringue.depaula@gmail.com</p>
+        </div>
+        <div class="social-media">
+          <h3>Redes Sociais</h3>
+          <a href="#" class="whatsapp-icon"
+            ><img src="assets/images/whatsapp.png" alt="WhatsApp"
+          /></a>
+          <a href="#" class="email-icon"
+            ><img src="assets/images/email.png" alt="Email"
+          /></a>
+          <a href="#" class="github-icon"
+            ><img src="assets/images/github.png" alt="GitHub"
+          /></a>
         </div>
       </div>
     </footer>
@@ -164,5 +158,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
-  </body>
+</body>
 </html>

@@ -241,6 +241,6 @@ section {
 }
 
 #kanban #adicionar-tarefa:hover {
-  background-color: #333; /* Cor de fundo verde mais escura ao passar o mouse */
+  background-color: #c0392b; /* Cor de fundo vermelho mais escura ao passar o mouse */
 }
 
