@@ -9,11 +9,16 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
-        <a class="navbar-brand mx-auto" href="#">TaskMinder</a>
+        <a class="navbar-brand mx-auto" href="#">
+          <img src="assets/images/logo.png" alt="Ícone do TaskMinder" class="menu-icon">
+          TaskMinder
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -29,15 +34,12 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="#inicio">Início</a>
-              <!-- Vincula ao ID "inicio" da seção -->
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#tarefas">Tarefas</a>
-              <!-- Vincula ao ID "tarefas" da seção -->
+              <a class="nav-link" href="#kanban">Tarefas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#sobre">Sobre</a>
-              <!-- Vincula ao ID "sobre" da seção -->
             </li>
           </ul>
         </div>
@@ -56,61 +58,100 @@
       </section>
 
       <!-- Seção Kanban de Tarefas -->
-<section id="kanban" class="text-center">
-    <div class="container">
-      <h2>Gerencie suas Tarefas</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <h3>A Fazer</h3>
-          <ul class="list-group" id="afazer">
-            <!-- Aqui você pode adicionar tarefas a fazer -->
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h3>Em Andamento</h3>
-          <ul class="list-group" id="emandamento">
-            <!-- Aqui você pode adicionar tarefas em andamento -->
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h3>Concluídas</h3>
-          <ul class="list-group" id="concluidas">
-            <!-- Aqui você pode adicionar tarefas concluídas -->
-          </ul>
-        </div>
-      </div>
-      <!-- Novo campo de texto para adicionar tarefas -->
-      <div class="row">
-        <div class="col-md-12">
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control"
-              id="novaTarefa"
-              placeholder="Adicionar nova tarefa"
-            />
+      <section id="kanban" class="text-center">
+        <div class="container">
+          <h2>Gerencie suas Tarefas</h2>
+
+          <!-- Novo campo de texto e botão para adicionar tarefas -->
+          <div class="row align-items-center">
+            <div class="col-md-4 mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="novaTarefa"
+                placeholder="Nova tarefa"
+              />
+            </div>
+            <div class="col-md-2">
+              <button id="adicionar-tarefa" class="btn btn-primary btn-block">
+                Adicionar
+              </button>
+            </div>
+          </div>
+          <!-- Fim do novo campo de texto e botão para adicionar tarefas -->
+
+          <div class="row mt-5">
+            <div class="col-md-4">
+              <h3>A Fazer</h3>
+              <ul class="list-group" id="afazer">
+                <!-- Aqui você pode adicionar tarefas a fazer -->
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3>Em Andamento</h3>
+              <ul class="list-group" id="emandamento">
+                <!-- Aqui você pode adicionar tarefas em andamento -->
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3>Concluídas</h3>
+              <ul class="list-group" id="concluidas">
+                <!-- Aqui você pode adicionar tarefas concluídas -->
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  
+      </section>
 
       <!-- Seção "Sobre" -->
       <section id="sobre" class="text-center">
         <div class="container">
           <h2>Sobre o TaskMinder</h2>
-          <p>Conheça mais sobre nossa aplicação.</p>
+          <p>
+            Bem-vindo à nossa humilde morada digital, onde a produtividade
+            encontra a simplicidade, e as tarefas mundanas ganham vida. Somos o
+            TaskMinder, uma equipe de entusiastas da organização empenhados em
+            tornar sua vida mais eficiente e menos caótica.
+          </p>
+          <p>
+            Mas quem somos nós, além de simples mortais apaixonados por listas
+            de tarefas? Somos aqueles que acreditam que o caos é apenas o começo
+            de uma ótima história, e que cada tarefa pode ser transformada em
+            uma conquista.
+          </p>
+          <p>
+            Nossa missão é simples: capacitar você a ser o mestre da sua própria
+            produtividade. Queremos ser a lanterna na escuridão das tarefas
+            intermináveis, o ombro amigo que lembra você dos prazos e a
+            ferramenta que mantém o caos sob controle.
+          </p>
+          <p>
+            Com uma pitada de inovação, uma pitada de magia e muita paixão,
+            estamos determinados a ajudá-lo a alcançar suas metas, a fazer mais
+            e a viver com menos estresse.
+          </p>
+          <p>
+            Estamos empolgados por você ter nos encontrado, e mal podemos
+            esperar para ajudar você a criar um futuro mais organizado e eficaz.
+            Junte-se a nós nesta jornada de produtividade e descubra como o
+            TaskMinder pode transformar a maneira como você lida com suas
+            tarefas diárias.
+          </p>
+          <p>
+            Lembre-se, a vida é uma lista de tarefas. E com o TaskMinder, você
+            está no controle.
+          </p>
+          <p>
+            Com amor pela organização e alegria na produtividade, A Equipe
+            TaskMinder
+          </p>
         </div>
       </section>
     </main>
 
     <footer class="text-center mt-auto">
-      <!-- Adicione a classe "mt-auto" para alinhar ao final da página -->
       <div class="container">
         <div class="row justify-content-center">
-          <!-- Adicione a classe "justify-content-center" para centralizar horizontalmente -->
           <div class="col-md-6">
             <h3>Contato</h3>
             <p>Email: contato@taskminder.com</p>

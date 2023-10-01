@@ -39,7 +39,6 @@ app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
 });
 
-// Mantenha o código JavaScript existente abaixo
 // Função para adicionar uma tarefa à lista
 function adicionarTarefa(tarefa) {
     const li = document.createElement("li");
@@ -98,92 +97,92 @@ function excluirTarefa() {
 
 // Função para adicionar uma tarefa à lista
 function adicionarTarefa(tarefa, listaId) {
-  const li = document.createElement("li");
-  li.textContent = tarefa;
+    const li = document.createElement("li");
+    li.textContent = tarefa;
 
-  const divBotoes = criarBotoesAcao();
-  li.appendChild(divBotoes);
+    const divBotoes = criarBotoesAcao();
+    li.appendChild(divBotoes);
 
-  const lista = document.getElementById(listaId);
-  lista.appendChild(li);
+    const lista = document.getElementById(listaId);
+    lista.appendChild(li);
 
-  // Limpar o campo de texto após adicionar a tarefa
-  document.getElementById("novaTarefa").value = "";
+    // Limpar o campo de texto após adicionar a tarefa
+    document.getElementById("novaTarefa").value = "";
 }
 
 // Função para criar um botão de ação para uma tarefa
 function criarBotoesAcao() {
-  const divBotoes = document.createElement("div");
-  divBotoes.className = "botoes-acao";
+    const divBotoes = document.createElement("div");
+    divBotoes.className = "botoes-acao";
 
-  const editarBtn = document.createElement("button");
-  editarBtn.textContent = "Editar";
-  editarBtn.className = "btn btn-info btn-sm";
-  editarBtn.addEventListener("click", editarTarefa);
+    const editarBtn = document.createElement("button");
+    editarBtn.textContent = "Editar";
+    editarBtn.className = "btn btn-info btn-sm";
+    editarBtn.addEventListener("click", editarTarefa);
 
-  const concluirBtn = document.createElement("button");
-  concluirBtn.textContent = "Concluir";
-  concluirBtn.className = "btn btn-success btn-sm";
-  concluirBtn.addEventListener("click", concluirTarefa);
+    const concluirBtn = document.createElement("button");
+    concluirBtn.textContent = "Concluir";
+    concluirBtn.className = "btn btn-success btn-sm";
+    concluirBtn.addEventListener("click", concluirTarefa);
 
-  const excluirBtn = document.createElement("button");
-  excluirBtn.textContent = "Excluir";
-  excluirBtn.className = "btn btn-danger btn-sm";
-  excluirBtn.addEventListener("click", excluirTarefa);
+    const excluirBtn = document.createElement("button");
+    excluirBtn.textContent = "Excluir";
+    excluirBtn.className = "btn btn-danger btn-sm";
+    excluirBtn.addEventListener("click", excluirTarefa);
 
-  divBotoes.appendChild(editarBtn);
-  divBotoes.appendChild(concluirBtn);
-  divBotoes.appendChild(excluirBtn);
+    divBotoes.appendChild(editarBtn);
+    divBotoes.appendChild(concluirBtn);
+    divBotoes.appendChild(excluirBtn);
 
-  return divBotoes;
+    return divBotoes;
 }
 
 // Função para editar uma tarefa
 function editarTarefa() {
-  const novoNome = prompt("Editar a tarefa:", this.parentElement.parentElement.firstChild.textContent);
-  if (novoNome !== null) {
-    this.parentElement.parentElement.firstChild.textContent = novoNome;
-  }
+    const novoNome = prompt("Editar a tarefa:", this.parentElement.parentElement.firstChild.textContent);
+    if (novoNome !== null) {
+        this.parentElement.parentElement.firstChild.textContent = novoNome;
+    }
 }
 
 // Função para marcar uma tarefa como concluída
 function concluirTarefa() {
-  this.parentElement.parentElement.firstChild.style.textDecoration = "line-through";
+    this.parentElement.parentElement.firstChild.style.textDecoration = "line-through";
 }
 
 // Função para excluir uma tarefa
 function excluirTarefa() {
-  this.parentElement.parentElement.remove();
+    this.parentElement.parentElement.remove();
 }
 
 // Adicionar uma nova tarefa ao pressionar Enter no campo de texto
 document.getElementById("novaTarefa").addEventListener("keyup", function (event) {
-  if (event.key === "Enter") {
-    const novaTarefa = this.value.trim();
-    if (novaTarefa !== "") {
-      adicionarTarefa(novaTarefa, "afazer");
+    if (event.key === "Enter") {
+        const novaTarefa = this.value.trim();
+        if (novaTarefa !== "") {
+            adicionarTarefa(novaTarefa, "afazer");
+        }
     }
-  }
 });
 
 // Inicializar funcionalidade de arrastar e soltar usando a biblioteca Sortable
 const sortableLists = new Sortable(document.querySelectorAll(".list-group"), {
-  animation: 150,
-  onEnd: function (evt) {
-    const item = evt.item;
-    const tarefa = item.textContent.trim();
-    const listaDestinoId = item.parentElement.id;
+    animation: 150,
+    onEnd: function (evt) {
+        const item = evt.item;
+        const tarefa = item.textContent.trim();
+        const listaDestinoId = item.parentElement.id;
 
-    // Verifique em qual lista a tarefa foi solta e atualize-a
-    if (listaDestinoId === "afazer") {
-      adicionarTarefa(tarefa, "afazer");
-    } else if (listaDestinoId === "emandamento") {
-      adicionarTarefa(tarefa, "emandamento");
-    } else if (listaDestinoId === "concluidas") {
-      adicionarTarefa(tarefa, "concluidas");
-    }
+        // Verifique em qual lista a tarefa foi solta e atualize-a
+        if (listaDestinoId === "afazer") {
+            adicionarTarefa(tarefa, "afazer");
+        } else if (listaDestinoId === "emandamento") {
+            adicionarTarefa(tarefa, "emandamento");
+        } else if (listaDestinoId === "concluidas") {
+            adicionarTarefa(tarefa, "concluidas");
+        }
 
-    // Remova o item original (a tarefa arrastada) da lista de origem
-    item.remove();
-  },
+        // Remova o item original (a tarefa arrastada) da lista de origem
+        item.remove();
+    },
 });
